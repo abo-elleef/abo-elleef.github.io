@@ -1,0 +1,105 @@
+<div ng-init="getInitialData();initilizePopOverButtons();" ng-controller="MainCtrl">
+  <div class="loader-container" ng-hide="currentItem">
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <div class="overlay">
+    </div>
+  </div>
+  <!--Title and tagline row-->
+  <div class="row">
+    <div class="col-lg-12 text-left">
+      <h1 ng-bind="currentItem.title">Hidden Figures</h1>
+      <blockquote ng-bind="currentItem.tagline || '&nbsp;'">Meet the women you don"t know, behind the mission you do.</blockquote>
+    </div>
+  </div>
+  <!--Main row : images/videos + description and buttons-->
+  <div class="row main-row">
+    <div class="col-lg-8 media-container-wrapper" ng-show="currentItem">
+      <div class="image-container" ng-if="currentState == 'Poster'">
+        <img ng-src="{{trustSrc(currentItem.imageMainBackdrop || noImage780)}}" alt="{{currentItem.title + ' Poster'}}" ng-cloak
+             id="posterimage" ng-animate-swap="currentItem.imageMainBackdrop || noImage780" class="cell swap-animation">
+      </div>
+      <div class="video-container" ng-if="currentState == 'Trailer'">
+        <iframe id="mainvid" ng-src="{{trustSrc(currentItem.trailerEmbed)}}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button ng-click="changeState()" title="Watch trailer" ng-cloak ng-if="currentState == 'Poster' && currentItem.trailerEmbed"
+              class="ytp-large-play-button ytp-button" aria-label="View this movie">
+        <svg height="100%" version="1.1" viewbox="0 0 68 48" width="100%">
+          <path class="ytp-large-play-button-bg" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z"
+                fill="#1f1f1e" fill-opacity="0.81"></path>
+          <path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path>
+          <path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path>
+        </svg>
+      </button>
+      <span class="imdbRatingPlugin imdbRatingStyle1" ng-cloak ng-if="currentState == 'Poster' && currentItem.imdbid" ng-init="getRatingFromImdb()"
+            data-title="{{currentItem.imdbid}}" data-user="ur0683828" data-style="p1">
+          <a href="{{'http://www.imdb.com/title/' + currentItem.imdbid + '/?ref_=plg_rt_1'}}">
+            <img src="http://g-ecx.images-amazon.com/images/G/01/imdb/plugins/rating/images/imdb_46x22.png">
+          </a>
+          <span class="rating">{{currentItem.imdbRating}} <span class="ofTen">/10</span>
+          </span>
+          <img src="http://g-ecx.images-amazon.com/images/G/01/imdb/plugins/rating/images/imdb_star_22x21.png" class="star">
+          </span>
+    </div>
+    <!--Buttons column: Add, Skip, Watched-->
+    <div class="col-lg-4" ng-show="currentItem">
+      <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group" >
+        <a href="" ng-click="sendUserAction(currentItem.title, 'add');nextItem()" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add to list</a>
+        <a href="" ng-click="sendUserAction(currentItem.title, 'skip');nextItem()" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>Skip</a>
+        <a href="" class="btn btn-primary" id="watchBtnID" data-title="Watched?" data-toggle="popover" data-placement="top" role="button"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Watched?</a>
+      </div>
+      <p class="lead">Description</p>
+      <p ng-bind="currentItem.plot">The incredible untold story of Katherine G. Johnson, Dorothy Vaughan and Mary Jackson - brilliant African-American
+        women working at NASA, who served as the brains behind one of the greatest operations in history: the launch of astronaut
+        John Glenn into orbit, a stunning achievement that restored the nation"s confidence, turned around the Space Race,
+        and galvanized the world. The visionary trio crossed all gender and race lines to inspire generations to dream big.</p>
+    </div>
+    <!--<a href='https://www.facebook.com/dialog/oauth?client_id=290907381018306&redirect_uri=http://localhost:9000/'> Refresh Facebook Token ON HEROKU</a>-->
+  </div>
+  <!--Slick-slider row-->
+
+  <div class="row slider-row">
+    <div class="col-xs-12 min-height-300">
+      <slick class="your-class" settings="slickConfig" ng-if="slickConfigLoaded" ng-class="{ 'opacity100' : opacity}">
+        <div class="slider-item" ng-repeat="char in currentItem.crew_details | filter: { job : 'Director'}:true | limitTo: 1">
+          <div class="img-wrapper">
+            <img ng-src="{{char.picture | defaultImage}}" alt="">
+            <div class="actor-name">{{char.name}}</div>
+            <div class="actor-character"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>{{char.job}}</div>
+          </div>
+        </div>
+        <div class="slider-item" ng-repeat="item in currentItem.characters | limitTo: 15" >
+          <div class="img-wrapper">
+            <img ng-src="{{item.picture | defaultImage}}" alt="">
+            <div class="actor-name">{{item.name}}</div>
+            <div class="actor-character">{{item.character}}</div>
+          </div>
+        </div>
+      </slick>
+    </div>
+  </div>
+
+  <!--<div class="row slider-row">
+    <div class="col-xs-12">
+      <div class="your-class">
+        <div class="slider-item" ng-repeat="char in currentItem.crew_details | filter: { job : 'Director'}:true | limitTo: 1">
+          <div class="img-wrapper">
+            <img ng-src="{{char.picture | defaultImage}}" alt="">
+            <div class="actor-name">{{char.name}}</div>
+            <div class="actor-character"><i class="glyphicon glyphicon-star" aria-hidden="true"></i>{{char.job}}</div>
+          </div>
+        </div>
+        <div class="slider-item" ng-repeat="item in currentItem.characters | limitTo: 15" initilize-slider>
+          <div class="img-wrapper">
+            <img ng-src="{{item.picture | defaultImage}}" alt="">
+            <div class="actor-name">{{item.name}}</div>
+            <div class="actor-character">{{item.character}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+</div>
+
