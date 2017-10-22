@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about llamatest</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./css/about.css">
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/materialize.js"></script>
+	<script type="text/javascript" src="./js/wow.min.js"></script>
+
+</head>
+<body>
+	<nav class="light-blue lighten-1 hide-on-large-only" role="navigation">
+	  <div class="nav-wrapper "><a id="logo-container" href="#" class="brand-logo header-logo">llamatest</a>
+	    <ul id="nav-mobile" class="side-nav">
+	      <li><a href="./index.html">Home</a></li>
+	      <li><a href="./project.html">Project Feed</a></li>
+	      <li><a href="./profile.html">profile</a></li>
+	      <li><a href="./createProject.html">New Project</a></li>
+	      <li><a href="./about.html">About</a></li>
+	      <li><a href="./signin.html">Sign In</a></li>
+	    </ul>
+	    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+	  </div>
+	</nav>
+	<div class="row">
+      <div class="col l2 m2 z-depth-1 side-bar hide-on-med-and-down">
+	    <div class="row center">
+	      <h3 class="large-logo light-blue lighten-1 no-margin">llamatest</h3>
+	    </div>
+      	<ul id="side-bar" class="">
+	      <li><a href="./index.html">Home</a></li>
+	      <li><a href="./project.html">Project Feed</a></li>
+	      <li><a href="./profile.html">profile</a></li>
+	      <li><a href="./createProject.html">New Project</a></li>
+	      <li><a href="./about.html">About</a></li>
+	      <li><a href="./signin.html">Sign In</a></li>
+	    </ul>
+      </div>
+      <div class="col offset-l2 l10 m12">
+      	<h4 class="section-title blue-text fadeInDown wow"> Our Mission </h4>
+      	<div class="row section-content">
+      		<p class=" wow fadeInUp col offset-s1 s11"> the misstion state will go here , this is only some random text that should be replaced with real data</p>
+      	</div>
+      	<h4 class="section-title blue-text fadeInDown wow"> we help you to </h4>
+      	<div class="section-content wow fadeInUp row  ">
+	      	<ul class="col offset-s1 s11">
+	      		<li> spread the word about you idea / prototype </li>
+	      		<li> user acceptance for your idea / prototype</li>
+	      		<li> let the crowd inspear you</li>
+	      	</ul>
+      	</div>
+      	<h4 class="section-title blue-text fadeInDown wow"> We Love To Communicate </h4>
+      	<div class="section-content wow fadeInUp ">  		
+	      	<ul class="row">
+	      		<li class="col offset-l1 offset-m1 l5 m5 s12 contant-item "><label class="waves-effect "><i class="mdi-notification-phone-in-talk left"></i> 20-100-380-9143</label></li>
+	      		<li class="col offset-l1 offset-m1 l5 m5 s12 contant-item "><label class="waves-effect "><i class="mdi-notification-phone-in-talk left"></i> 20-128-305-0267</label></li>
+	      		<li class="col offset-l1 offset-m1 l5 m5 s12 contant-item "><label class="waves-effect "><i class="mdi-communication-email left"></i> info@llamatest.com</label></li>
+	      		<li class="col offset-l1 offset-m1 l5 m5 s12 contant-item "><label class="waves-effect "><i class="mdi-file-cloud left"></i> fax number</label></li>
+	      	</ul>
+      	</div>
+      	<h4 class="section-title blue-text fadeInDown wow"> Location </h4>
+      	<div class="section-content wow fadeInUp center" id="map">
+      		<iframe
+			  width="100%"
+			  height="450"
+			  frameborder="0" style="border:0"
+			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC9Mm861Z2Lnh4zLxjyiqqx_AwSzwtMT_4
+			    &q=Space+Needle,Seattle+WA">
+			</iframe>
+      	</div>
+      	<!-- mission -->
+      	<!-- why we are useful -->
+      	<!-- why we are useful -->
+      	<!-- place on map -->
+      </div>
+	</div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+		    	$('.button-collapse').sideNav();
+			});
+			// animationing css
+			new WOW().init();
+		</script>
+</body>
+</html>

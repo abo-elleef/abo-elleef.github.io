@@ -1,0 +1,44 @@
+.login-text{
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 50px !important;
+	margin-bottom: 50px;
+	text-transform: capitalize;
+
+}
+.sm-container{
+	height: 284px;
+}
+.sm-login{
+	margin-top: 20px;
+}
+
+.input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input:focus + label {
+     color: #64B5F6 !important;
+   }
+   /* label underline focus color */
+   .input-field input:focus {
+     border-bottom: 1px solid #64B5F6 !important;
+     box-shadow: 0 1px 0 0 #64B5F6 !important;
+   }
+   /* valid color */
+   .input-field input.valid {
+     border-bottom: 1px solid #64B5F6 !important;
+     box-shadow: 0 1px 0 0 #64B5F6 !important;
+   }
+   /* invalid color */
+   .input-field input.invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   .input-field input.invalid + label {
+   		color: red;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #64B5F6 !important;
+   }

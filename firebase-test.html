@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>firebase tesst</title>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script type="text/javascript">
+      var fb = new Firebase("https://glaring-fire-187.firebaseio.com");
+      fb.on("value", function(data) {
+        var name = data.val() ? data.val().name : "";
+        alert("My name is " + name);
+      });
+  </script>
+</head>
+<body>
+<p>arwaf projects</p>
+<ul>
+  <li></li>
+</ul>
+</body>
+</html>

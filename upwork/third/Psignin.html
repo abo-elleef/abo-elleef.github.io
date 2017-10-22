@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> llamatest | signin </title>
+	<link rel="stylesheet" type="text/css" href="./css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+	<link rel="stylesheet" type="text/css" href="./css/Psignin.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/materialize.js"></script>
+</head>
+<body>
+	<div id="signin-container" class="row">
+		<div class="col s12 m8 l6 offset-m2 offset-l3">
+      <p id="login-text" class="card center light-blue-text"> Welcome back, Login and get inspired by the crowd </p>
+		</div>
+      <form class="">
+	      <div class="col s6 offset-s3">
+	      	<input type="text" placeholder="Username" class="z-depth-1 light-blue-text" />
+	      	<input type="password" placeholder="Password" class="z-depth-1 light-blue-text" />
+	      </div>
+      	<p class="col s6 offset-s3">
+		      <input type="checkbox" id="remember" />
+		      <label for="remember">Remember me</label>
+		    </p>
+		    <div class="col s6 offset-s3 center">
+		    	<a href="./profile.html" class="btn light-blue lighten-1">Login</a>
+		    </div>
+		    <div class="col s6 offset-s3 center">
+		    	<a id="signin-signup" class="right" href="#"> sign up it is free </a>
+		    </div>
+      </form>
+	</div>
+	<div id="signup-container" class="row light-blue lighten-1">
+		<div class="col s12 m8 l6 offset-m2 offset-l3">
+      <p id="login-text" class="card center light-blue-text">Let us get started on your free account and get to testing </p>
+		</div>
+      <form class="">
+	      <div class="col s6 offset-s3">
+	      	<input type="text" placeholder="first name" class="z-depth-1 light-blue-text" />
+	      	<input type="text" placeholder="last name" class="z-depth-1 light-blue-text" />
+	      	<input type="email" placeholder="Email" class="z-depth-1 light-blue-text" />
+				    <select>
+				      <option value="" disabled selected>Choose your option</option>
+		      		<option>Egypt</option>
+		      		<option>USA</option>
+		      		<option>England</option>
+		      		<option>France</option>
+				    </select>
+	      	<input type="text" placeholder="Username" class="z-depth-1 light-blue-text" />
+	      	<input type="password" placeholder="Password" class="z-depth-1 light-blue-text" />
+	      </div>
+      	<p class="col s6 offset-s3">
+		      <input type="checkbox" id="subscribe" />
+		      <label for="subscribe" class="white-text">Yes, sign me up for that llamatest newsletter!</label>
+		    </p>
+		    <div class="col s6 offset-s3 center">
+		    	<a href="./profile.html" class="btn white light-blue-text">Start</a>
+		    </div>
+		    <div class="col s6 offset-s3 center">
+		    	<a id="signup-signin" class="right white-text" href="#"> back to login </a>
+		    </div>
+      </form>
+	</div>
+	
+
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+	  	  $('select').material_select();
+		 });
+		$("#signup-container").animate({"height":0},0);
+		$("#signin-signup").click(function(){
+			$("#signup-container").animate({"height":600},700);
+			$("#signin-container").animate({"height":0},400);
+			return false;
+		});
+		$("#signup-signin").click(function(){
+			$("#signup-container").animate({"height":0},400);
+			$("#signin-container").animate({"height":400},700);
+			return false;
+		});
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

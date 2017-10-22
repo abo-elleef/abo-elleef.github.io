@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Treeify</title>
+    <link rel="stylesheet" type="text/css" href="./treeify.css">
+    <script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="./treeify.js"></script>
+  </head>
+  <body>
+    <ul id="treeifiedList">
+      <li id="1"  parent_id="0"> list item 1</li>
+      <li id="2"  parent_id="0"> list item 2</li>
+      <li id="3"  parent_id="0"> list item 3</li>
+      <li id="4"  parent_id="0"> list item 4</li>
+      <li id="5"  parent_id="0"> list item 5</li>
+      <li id="6"  parent_id="2"> list item 6</li>
+      <li id="7"  parent_id="3"> list item 7</li>
+      <li id="8"  parent_id="1"> list item 8</li>
+      <li id="9"  parent_id="4"> list item 9</li>
+      <li id="10" parent_id="4"> list item 10 </li>
+      <li id="11" parent_id="9"> list item 11 </li>
+      <li id="12" parent_id="1"> list item 12 </li>
+      <li id="13" parent_id="5"> list item 13</li>
+      <li id="14" parent_id="4"> list item 14 </li>
+      <li id="15" parent_id="4"> list item 15 </li>
+      <li id="16" parent_id="5"> list item 16 </li>
+      <li id="17" parent_id="8"> list item 17 </li>
+      <li id="18" parent_id="9"> list item 18</li>
+      <li id="19" parent_id="5"> list item 19 </li>
+      <li id="20" parent_id="5"> list item 20 </li>
+      <li id="21" parent_id="2"> list item  21</li>
+    </ul>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#treeifiedList").treeify();
+    });
+
+    </script>
+  </body>
+</html>

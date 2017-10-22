@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title> fourth upwork</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/base.css">
+
+	<!-- Optional theme 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+	-->
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/base.js"></script>
+
+	<script src="./js/respond.js"></script>
+	<!-- select 2 -->
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
+</head>
+<body>
+	<ul id="drop-list">
+		<li class="burble text-center"><a href="./2.html" class=" white-text">Pesos</a></li>
+		<li class="burble text-center"><a href="./3.html" class=" white-text">Estratégias Combinadas</a></li>
+		<li class="burble text-center"><a href="./4.html" class=" white-text">Estratégias x SKU</a></li>
+		<li class="burble text-center"><a href="./7.html" class=" white-text">Simular</a></li>
+	</ul>
+	<div class="container">
+		<div class="row burble white-text header">
+			<a href="#" id="drop-toggler">
+				<div id="menu-icon" class="pull-left header-icon dropdown">
+				<img class="img-responsive pull-left" src="./images/menu-icon.png" alt="menu-icon" />
+				</div>
+				<p id="menu-word" class="pull-left white-text">MENU</p>
+			</a>
+			
+			<div id="home-icon" class="pull-left header-icon">
+				<a href="./1.html">
+					<img class="img-responsive" src="./images/home-icon.png" alt="home-icon"/>
+				</a>
+
+			</div>
+			<img id="logo" class="pull-left " src="./images/logo.png" alt="Índice Netshoes" />
+
+			<p class="pull-left product-name">Índice Netshoes <br>
+				Simulador
+			</p>
+			<a href="#" class="pull-right btn btn-logo white burble-text">Loja Netshoes</a>				
+		</div>
+		<div class="row">
+			<ol class="breadcrumb gray">
+			  <li><a href="./1.html" class="burble-text breadcrumb-link">Home</a></li>
+			  
+			</ol>
+		</div>
+		<div class="row white main-part ">
+			<h3>Alterar ou Visualizar Pesos</h3>		
+			<p class="estrategy-desc">Alterar os pesos individuais dos 12 indicadores que compõe o índice de acordo com a meta a ser atingida.  </p>
+			<p class="estrategy-desc">A alteração pode ser feita por departamento.  </p>
+			<hr />
+			<div class="">
+				<div id="upper-part" class="normal-gray form-container normal-padding col-xs-6 clear-both">
+					<h3>Departamento</h3>
+					<div class="radio">
+					  <label>
+					    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+					    	Aplicar a todos departamentos
+
+					  	</label>
+					</div>
+					<div class="">
+			      <div class="radio">
+						  <label>
+						    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1">
+						    	Aplicar ao departamento
+						  </label>
+							<select class="form-control col-xs-offset-1" title="type">
+						  	<option>Artes Marciais</option>
+						  	<option>Automobilismo</option>
+						  	<option>Aventura</option>
+						  	<option>Basquete</option>
+						  	<option>Bike</option>
+						  	<option>Casual</option>
+						  	<option>Eletrônicos</option>
+						  </select>
+						</div>
+				  </div>
+				</div>
+			  <div class="clearfix"></div>
+			 <div id="tables-part" class="normal-gray form-container normal-padding">
+			  <h3>Pilares</h3>
+			  <table class="table table-bordered table-striped">
+			  	<thead>
+				  	<tr class="burble">
+				  		<th class="text-center white-text">Popularidade</th>
+				  		<th class="text-center white-text">00</th>
+				  	</tr>
+			  	</thead>
+			  	<tbody class="text-center">
+			  	
+			  		<tr>
+			  			<td class="wideRowPart text-center"> 
+			  				<p>
+			  					Faturamento <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="11"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Venda <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="13"></td>
+			  		</tr>			 
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+					  			Visualização <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="9"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Conversão <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="6"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Recência <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="6"></td>
+			  		</tr>
+			  	</tbody>
+			  </table>
+			  <table class="table table-bordered table-striped">
+			  	<thead>
+				  	<tr class="burble">
+				  		<th class="text-center white-text">Competitividade</th>
+				  		<th class="text-center white-text">00</th>
+				  	</tr>
+			  	</thead>
+			  	<tbody class="text-center">
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Desposicionado <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="20"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Posição <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="7"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Desconto <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="5"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Exclusivo <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="1"></td>
+			  		</tr>
+			  	</tbody>
+			  </table>
+			  <table class="table table-bordered table-striped">
+			  	<thead>
+				  	<tr class="burble">
+				  		<th class="text-center white-text">Cobertura</th>
+				  		<th class="text-center white-text">00</th>
+				  	</tr>
+			  	</thead>
+			  	<tbody class="text-center">
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Grade <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="15"></td>
+			  		</tr>
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Cobertura <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  				</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="10"></td>
+			  		</tr>
+			  	</tbody>
+			  </table>
+			  <table class="table table-bordered table-striped">
+			  	<thead>
+				  	<tr class="burble">
+				  		<th class="text-center white-text">Financeiro</th>
+				  		<th class="text-center white-text">10</th>
+				  	</tr>
+			  	</thead>
+			  	<tbody class="text-center">
+			  		<tr>
+			  			<td class="wideRowPart text-center">
+			  				<p>
+			  					Margem <button class="pop pull-right" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">?</button>
+			  				</p>
+			  			</td>
+			  			<td class="smallRowPart"><input class="count" type="number" value="10"></td>
+			  		</tr>
+			  	</tbody>
+			  </table>
+			  <table id="total" class="table ">
+				  <thead>
+				  </thead>
+				  <tbody class="text-center">
+				  	<tr class="row">
+				  		<td class="col-xs-6"></td>
+				  		<td id="total-string" class="col-xs-3" >Total pilares :</td>
+				  		<td id="total-number" class="col-xs-3"> 100
+				  		<img src="./images/correct-icon.png" class="pull-right" alt="correct">
+				  		</td>
+				  	</tr>
+				  </tbody>
+			  </table>
+			</div>
+		</div>
+	  <div class="">
+	    <div class="">
+	      <a  class="btn burble col-xs-2  pull-right submit-button white-text">Definir pilares</a>
+	      <a id="Definir-button" class="btn burble col-xs-2  pull-right submit-button white-text">Definir padrão</a>
+	    </div>
+	  </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('select').select2();
+	});
+	</script>
+</body>
+</html>

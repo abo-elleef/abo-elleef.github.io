@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Material Box</title>
+	<link rel="stylesheet" type="text/css" href="./css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="./css/material-box.css">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+	
+	<header>
+		
+	</header>
+	<div class="row">
+		<div class="col s10 offset-s1">
+			<div class="minimize black"><a href="#" class="white-text">close</a></div>
+			<div class="row">
+				<div class=" center relative">
+					<div class="box blue darken-4">
+						<span class="white-text color-name"> dark blue <br/> #01579b</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box blue darken-2">
+						<span class="white-text color-name"> noraml blue <br/> #0288d1</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box light-blue lighten-2">
+						<span class="white-text color-name"> light blue <br/> #4fc3f7</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box light-blue lighten-4">
+						<span class="white-text color-name"> very light blue <br/> #b3e5fc</span>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class=" center relative">
+					<div class="box green darken-4">
+					<span class="white-text color-name"> dark green <br/> #1b5e20</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box green darken-2">
+					<span class="white-text color-name"> normal green <br/> #388e3c</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box green lighten-2">
+					<span class="white-text color-name"> light green <br/> #81c784</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box green lighten-4">
+					<span class="white-text color-name"> very light green <br/> #c8e6c9</span>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class=" center relative">
+					<div class="box orange darken-4">
+					<span class="white-text color-name"> dark orange <br/> #e65100</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box orange darken-2">
+					<span class="white-text color-name"> normal orange <br/> #f57c00</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box orange lighten-2">
+					<span class="white-text color-name"> light orange <br/> #ffb74d</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box orange lighten-4">
+					<span class="white-text color-name"> very light orange <br/> #ffe0b2</span>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class=" center relative">
+					<div class="box purple darken-4">
+					<span class="white-text color-name"> dark purple <br/> #4a148c</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box purple darken-2">
+					<span class="white-text color-name"> normal purple <br/> #7b1fa2</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box purple lighten-2">
+					<span class="white-text color-name"> light purple <br/> #ba68c8</span>
+					</div>
+				</div>
+				<div class=" center relative">
+					<div class="box purple lighten-4">
+					<span class="white-text color-name"> very light purple  <br/> #e1bee7</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="material-bg">
+		<div class="controls">
+			<a id="close-hero" class="btn right">close</a>
+		</div>
+		<div class="details">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".minimize").hide();
+			var width = $(window).width()/4;
+			var height = $(window).height()/4;
+			$(".box").css("width", width);
+			$(".box").css("height", height);
+			var boxes = $(".box");
+			for (var i = 0; i < boxes.length;  i++) {
+				var index = i%4;
+				$(boxes[i]).css("left", width *index);
+				$(boxes[i]).css("top", height *Math.floor(i/4));
+				$(boxes[i]).css("top", height *Math.floor(i/4));
+			};
+			$(".box").click(function(e){
+				$(this).addClass("centerlize");
+				var that  = this;
+				setTimeout(function(){
+					$(that).addClass("expand");
+					// $(that).css("")
+				},200)
+				setTimeout(function(){
+					$(".minimize").show();
+				},1000);
+			});
+			$(".minimize").click(function(e){
+				e.preventDefault();
+				var that = $(".box.expand").removeClass("expand");
+				setTimeout(function(){
+					$(that).removeClass("centerlize");
+				},200)
+				setTimeout(function(){
+					$(".minimize").hide();
+				},0);
+			});
+		});
+	</script>
+
+</body>
+</html>
+
+

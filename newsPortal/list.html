@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html ng-app="shafaf">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>News Portal</title>
+  <link rel="stylesheet" type="text/css" href="./css/materialize-r2l.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/animate-r2l.css">
+  <link rel="stylesheet" type="text/css" href="./css/base-r2l.css">
+
+  <script type="text/javascript" src="./js/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="./js/materialize.js"></script>
+  <script type="text/javascript" src="./js/base.js"></script>
+</head>
+<body class="" dir="rtl">
+  <nav>
+    <div class="nav-wrapper normal-blue row">
+      <a id="logo" href="#!" class="brand-logo col l4 m8 s12"><img class="" src="./images/header-logo.png"></a>
+      <a  data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <ul id="categories" class="right hide-on-med-and-down dark-blue">
+        <li class="normal-blue"><a class='dropdown-button btn normal-blue waves-effect waves-light' href="#!" data-activates='dropdown1'>صفحات الموقع</a></li>
+        <li class="normal-blue"><a class='dropdown-button btn normal-blue waves-effect waves-light' href="#!" data-activates='dropdown2'>قسم رئيسي</a></li>
+        <li class="normal-blue"><a class='dropdown-button btn normal-blue waves-effect waves-light' href="#!" data-activates='dropdown3'>قسم رئيسي</a></li>
+        <li class="normal-blue"><a class='dropdown-button btn normal-blue waves-effect waves-light' href="#!" data-activates='dropdown4'>قسم رئيسي</a></li>
+      </ul>
+      <ul id="mobile-demo" class="offwhite side-nav collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header dark-gray-text waves-effect waves-dark">صفحات الموقع</div>
+          <div class="collapsible-body">
+            <ul>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./home.html" target="_blank">الرئيسية</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قائمة أخبار</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./detailedNews.html" target="_blank">تفاصيل الخبر</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./images.html" target="_blank">ارشيف الصور</a></li>
+            </ul>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header offwhite dark-gray-text waves-effect waves-dark">قسم رئيسي</div>
+          <div class="collapsible-body offwhite">
+            <ul>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+            </ul>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header offwhite dark-gray-text waves-effect waves-dark">قسم رئيسي</div>
+          <div class="collapsible-body offwhite">
+            <ul>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+            </ul>  
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header offwhite dark-gray-text waves-effect waves-dark">قسم رئيسي</div>
+          <div class="collapsible-body offwhite">
+            <ul>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+              <li><a class="dark-gray-text waves-effect waves-dark" href="./list.html" target="_blank">قسم فرعي</a></li>
+            </ul>  
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="wrapper">
+  <div class="progress light-blue margin-zero">
+    <div class="determinate blue-accent"></div>
+  </div>
+  <div id="slider"  class="row">
+    <div class="slide center col s12 m12 l8 offset-l2 active animated" data-ani-in-cls="bounceInUp" data-ani-out-cls="bounceOutUp" >
+      <img src="./images/1.jpg" class="responsive-img" />
+      <a href="./detailedNews.html" class="animated capText" data-ani-in-cls="fadeInDown" data-ani-out-cls="fadeOutLeft">مثال علي خبر ترفيهي داخل العاصمة الفرنسية باريس</a>
+    </div>
+    <div class="slide hide col center col s12 m12 l8 offset-l2" data-ani-in-cls="bounceInUp" data-ani-out-cls="bounceOutUp">
+      <img src="./images/2.jpg" class="responsive-img" />
+      <a href="./detailedNews.html" class="animated capText hide" data-ani-in-cls="fadeInUp" data-ani-out-cls="fadeOutRight">مثال علي خبر متعلق بالدولة المصرية الحديثة</a>
+    </div>
+    <div class="slide hide col center col s12 m12 l8 offset-l2" data-ani-in-cls="bounceInRight" data-ani-out-cls="bounceOutUp">
+      <img src="./images/3.jpg" class="responsive-img" />
+      <a href="./detailedNews.html" class="animated capText hide" data-ani-in-cls="fadeInDown" data-ani-out-cls="fadeOutUp">مثال علي خبر سياحي متعلق بالانشطة البحرية</a>
+    </div>
+    <div class="slide hide col center col s12 m12 l8 offset-l2" data-ani-in-cls="bounceInDown" data-ani-out-cls="bounceOutUp">
+      <img src="./images/4.jpg" class="responsive-img" />
+      <a href="./detailedNews.html" class="animated capText hide" data-ani-in-cls="fadeInUp" data-ani-out-cls="fadeOutDown">منظومة المرور المصرية الجديدة واثرها علي تنظيم المرور داخل العاصمة</a>
+    </div>
+    <div class="slide hide col center col s12 m12 l8 offset-l2" data-ani-in-cls="bounceInLeft" data-ani-out-cls="bounceOutUp">
+      <img src="./images/5.jpg" class="responsive-img" />
+      <a href="./detailedNews.html" class="animated capText hide" data-ani-in-cls="fadeInDown" data-ani-out-cls="fadeOutLeft">الكتاب هو كلمة السر في تقدم او تخلف الانسان</a>
+    </div>
+  </div>
+  <div class="row" >
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/8.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ ساعة </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/6.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/11.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/12.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/13.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/7.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/9.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/10.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/5.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/2.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/1.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+    <div class="archiveItem col l3 m4 s12 slideInUp animated">
+      <div class="card img-arch-shafaf offwhite">
+        <div class="card-image">
+          <img src="./images/3.jpg">
+        </div>
+        <div class="card-content">
+          <p><a class="title dark-gray-text" href="./detailedNews.html">مثال تجربي لعنوان خبر رئيسي في الموقع</a></p>
+          <p class="date right light-gray-text"> منذ يومين </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content dark-blue'>
+    <li><a class="white-text" href="./home.html">الرئيسية</a></li>
+    <li><a class="white-text" href="./list.html">قائمة أخبار</a></li>
+    <li><a class="white-text" href="./detailedNews.html">تفاصيل الخبر</a></li>
+    <li><a class="white-text" href="./images.html">أرشيف الصور</a></li>
+  </ul>
+  <ul id='dropdown2' class='dropdown-content dark-blue'>
+    <li><a class="white-text" href="./list.html">قسم قرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم قرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم قرعي</a></li>
+  </ul>
+  <ul id='dropdown3' class='dropdown-content dark-blue'>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+  </ul>
+  <ul id='dropdown4' class='dropdown-content dark-blue'>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+    <li><a class="white-text" href="./list.html">قسم فرعي</a></li>
+  </ul>
+</div>
+
+<footer>
+  <ul class="hot-news">
+    <li class="blue-accent"><a class="white-text" href="./detailedNews.html"> المثال الأول علي الأخبار الساخنة التي يتم تصديرها من قبل المؤسسة الصحفية  </a></li>
+    <li class="blue-accent"><a class="white-text" href="./detailedNews.html"> المثال الثاني علي الأخبار الساخنة التي يتم تصديرها من قبل المؤسسة الصحفية </a></li>
+    <li class="blue-accent"><a class="white-text" href="./detailedNews.html"> المثال الثالث علي الأخبار الساخنة التي يتم تصديرها من قبل المؤسسة الصحفية </a></li>
+    <li class="blue-accent"><a class="white-text" href="./detailedNews.html"> المثال الرابع علي الأخبار الساخنة التي يتم تصديرها من قبل المؤسسة الصحفية </a></li>
+    <li class="blue-accent"><a class="white-text" href="./detailedNews.html"> المثال الخامس علي الأخبار الساخنة التي يتم تصديرها من قبل المؤسسة الصحفية </a></li>
+
+  </ul>
+  <div class="row blue-accent">
+    <div class="col l3 m6 s12">
+      <img src="./images/logo.png" class="responsive-img" />
+    </div>
+    <div class="col l3 m6 s12">
+      <div class="white-text">
+        <p>مثال علي وصف تفصيلي عن مؤسسة أخبارية تصف اتجاهاتها و قيمها التي تحدد سياستها الأخبارية </p>
+      </div>
+    </div>
+    <div class="col l6 m8 s12">
+      <h5 class="white-text">روابط</h5>
+      <ul class="row">
+        <li class="col s6"><a class="grey-text text-lighten-3" href="#!">مثال علي رابط</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="#!">مثال علي رابط</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="#!">مثال علي رابط</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="#!">مثال علي رابط</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="#!">مثال علي رابط</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="./home.html">الرئيسية</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="./detailedNews.html">مثال لتفاصيل خبر</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="./list.html">مثال لصفحة أخبار</a></li>
+        <li class="col s6"><a class="grey-text text-lighten-3" href="./images.html">أرشيف الصور</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
